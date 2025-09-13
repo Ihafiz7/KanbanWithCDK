@@ -1,0 +1,19 @@
+/* sidebar.component.css */
+.active-tab {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.active-subtab {
+  background-color: #eef2ff;
+  color: #3b82f6;
+  border-left: 4px solid #3b82f6;
+}
+
+.subtab {
+  padding-left: 2.5rem;
+}
+
+.hover-effect:hover {
+  background-color: #d6780b;
+}

@@ -1,0 +1,12 @@
+.progress-bar {
+  transition: width 1s ease-in-out;
+}
+
+.chart-bar {
+  transition: all 0.5s ease;
+}
+
+.chart-bar:hover {
+  opacity: 0.8;
+  transform: scaleY(1.05);
+}

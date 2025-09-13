@@ -1,0 +1,186 @@
+<div class="flex min-h-screen bg-gray-50">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-white shadow-md fixed h-full overflow-y-auto">
+    <div class="p-6">
+      <div class="flex items-center space-x-3 mb-8">
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center">
+            <img src="assets/logo.svg" alt="log">
+        </div>
+        <h1 class="text-xl font-bold text-gray-800"> <span class="text-orange-600">PMRAS</span> Analytics</h1>
+      </div>
+
+      <nav class="space-y-2">
+        <a class="flex items-center p-3 text-[#ea580c] bg-orange-50 rounded-lg" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2极速11z" />
+          </svg>
+          <span>Dashboard</span>
+        </a>
+        <a class="flex items-center p-3 text-gray-600 hover:text-[#ea580c] hover:bg-orange-50 rounded-lg transition-colors" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+          </svg>
+          <span>Projects</span>
+        </a>
+        <a class="flex items-center p-3 text-gray-600 hover:text-[#ea580c] hover:bg-orange-50 rounded-lg transition-colors" href="#">
+          <svg xmlns="http://www.w3.org/2000/s极速11z" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2极速11z" />
+          </svg>
+          <span>Team</span>
+        </a>
+        <a class="flex items-center p-3 text-gray-600 hover:text-[#ea580c] hover:bg-orange-50 rounded-lg transition-colors" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          </svg>
+          <span>Calendar</span>
+        </a>
+        <a class="flex items-center p-3 text-gray-600 hover:text-[#ea580c] hover:bg-orange-50 rounded-lg transition-colors" href="#">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.极速11z" />
+          </svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main class="ml-64 flex-1 p-8">
+    <!-- Header -->
+    <div class="flex justify-between items-center mb-8">
+      <div>
+        <h1 class="text-2xl font-bold text-gray-800">Project Analytics Dashboard</h1>
+        <p class="text-gray-600">Track and analyze your project performance</p>
+      </div>
+      <div class="flex space-x-4">
+        <button class="px-4 py-2 bg-white border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="极速11z" />
+          </svg>
+          Filter
+        </button>
+        <button class="px-4 py-2 bg-[#ea580c] text-white rounded-lg hover:bg-[#c2410c] transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+          </svg>
+          New Report
+        </button>
+      </div>
+    </div>
+
+    <!-- Stats Overview -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <div *ngFor="let stat of stats" class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+        <div class="flex items-center justify-between">
+          <div>
+            <h2 class="text-lg font-semibold text-gray-800">{{ stat.value }}</h2>
+            <p class="text-sm text-gray-600">{{ stat.label }}</p>
+          </div>
+          <div class="p-3 rounded-lg" [ngClass]="stat.bgColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" [ngClass]="stat.iconColor" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="stat.iconPath" />
+            </svg>
+          </div>
+        </div>
+        <div class="mt-4">
+          <div class="flex items-center text-sm" [ngClass]="stat.trendColor">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="stat.trendIcon" />
+            </svg>
+            <span>{{ stat.trendValue }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts Section -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+      <!-- Project Status Chart -->
+      <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-lg font-semibold text-gray-800">Project Status Distribution</h2>
+          <button class="text-[#ea580c] hover:text-[#c2410c]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 极速11z" />
+            </svg>
+          </button>
+        </div>
+        <div class="h-64 flex items-end justify-between space-x-2">
+          <div *ngFor="let item of statusData" class="flex flex-col items-center">
+            <div class="w-12 rounded-t-lg mb-2 chart-bar" [ngClass]="item.color" [style.height.px]="item.value"></div>
+            <span class="text-sm text-gray-600">{{ item.label }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Performance -->
+      <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-lg font-semibold text-gray-800">Team Performance</h2>
+          <button class="text-[#ea580c] hover:text-[#c2410c]">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+            </svg>
+          </button>
+        </div>
+        <div class="space-y-4">
+          <div *ngFor="let team of teamPerformance">
+            <div class="flex justify-between mb-1">
+              <span class="text-sm font-medium">{{ team.name }}</span>
+              <span class="text-sm font-medium text-gray-600">{{ team.percentage }}%</span>
+            </div>
+            <div class="w-full bg-gray-200 rounded-full h-2">
+              <div class="h-2 rounded-full progress-bar" [ngClass]="team.color" [style.width.%]="team.percentage"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Projects & Activity -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Recent Projects -->
+      <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-lg font-semibold text-gray-800">Recent Projects</h2>
+          <button class="text-[#ea580c] hover:text-[#c2410c] text-sm font-medium">View all</button>
+        </div>
+        <div class="space-y-4">
+          <div *ngFor="let project of recentProjects" class="flex items-center justify-between p-3 hover:bg-gray-50 rounded-lg transition-colors">
+            <div class="flex items-center">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center mr-4" [ngClass]="project.iconBg">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" [ngClass]="project.iconColor" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="project.iconPath" />
+                </svg>
+              </div>
+              <div>
+                <h3 class="font-medium">{{ project.name }}</h3>
+                <p class="text-sm text-gray-600">Due: {{ project.dueDate }}</p>
+              </div>
+            </div>
+            <span class="px-3 py-1 text-xs rounded-full" [ngClass]="project.statusClass">{{ project.status }}</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow">
+        <div class="flex justify-between items-center mb-6">
+          <h2 class="text-lg font-semibold text-gray-800">Recent Activity</h2>
+          <button class="text-[#ea580c] hover:text-[#c2410c] text-sm font-medium">View all</button>
+        </div>
+        <div class="space-y-4">
+          <div *ngFor="let activity of recentActivities" class="flex items-start p-3 hover:bg-gray-50 rounded-lg transition-colors">
+            <div class="w-8 h-8 rounded-full bg-gray-200 flex items-center justify-center mr-3 mt-1">
+              <span class="text-gray-600 text-xs font-medium">{{ activity.initials }}</span>
+            </div>
+            <div>
+              <p class="text-sm">{{ activity.description }}</p>
+              <p class="text-xs text-gray-500">{{ activity.time }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>

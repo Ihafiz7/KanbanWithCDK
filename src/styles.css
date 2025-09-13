@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .form-input {
+    @apply w-full rounded-md border border-gray-300 bg-white px-3 py-2 
+           text-gray-900 placeholder-gray-400
+           focus:outline-none focus:border-[#ea580c] focus:ring-2 focus:ring-[#ea580c];
+  }
+}

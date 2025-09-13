@@ -1,0 +1,61 @@
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.css']
+})
+export class HomeComponent {
+   blocks = [
+    { img: 'https://randomuser.me/api/portraits/women/10.jpg', class: 'w-16 h-16 rounded-xl overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-gray-200 rounded-xl' },
+    { img: 'https://randomuser.me/api/portraits/men/12.jpg', class: 'w-16 h-16 rounded-full overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-purple-700 rounded-tl-full' },
+    { img: 'https://randomuser.me/api/portraits/women/22.jpg', class: 'w-16 h-16 rounded-xl overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-gray-200 rounded-br-full' },
+    { img: 'https://randomuser.me/api/portraits/men/32.jpg', class: 'w-16 h-16 rounded-full overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-purple-800 rounded-tr-full' },
+    { img: 'https://randomuser.me/api/portraits/women/10.jpg', class: 'w-16 h-16 rounded-xl overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-gray-200 rounded-xl' },
+    { img: 'https://randomuser.me/api/portraits/men/12.jpg', class: 'w-16 h-16 rounded-full overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-purple-700 rounded-tl-full' },
+    { img: '', class: 'w-16 h-16 rounded-xl overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-gray-200 rounded-br-full' },
+    { img: 'https://randomuser.me/api/portraits/men/32.jpg', class: 'w-16 h-16 rounded-full overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-purple-800 rounded-tr-full' },
+    { img: 'https://randomuser.me/api/portraits/women/10.jpg', class: 'w-16 h-16 rounded-xl overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-gray-200 rounded-xl' },
+    { img: 'https://randomuser.me/api/portraits/men/12.jpg', class: 'w-16 h-16 rounded-full overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-purple-700 rounded-tl-full' },
+    { img: 'https://randomuser.me/api/portraits/women/22.jpg', class: 'w-16 h-16 rounded-xl overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-gray-200 rounded-br-full' },
+    { img: 'https://randomuser.me/api/portraits/men/32.jpg', class: 'w-16 h-16 rounded-full overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-purple-800 rounded-tr-full' },
+    { img: 'https://randomuser.me/api/portraits/women/10.jpg', class: 'w-16 h-16 rounded-xl overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-gray-200 rounded-xl' },
+    { img: 'https://randomuser.me/api/portraits/men/12.jpg', class: 'w-16 h-16 rounded-full overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-purple-700 rounded-tl-full' },
+    { img: '', class: 'w-16 h-16 rounded-xl overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-gray-200 rounded-br-full' },
+    { img: 'https://randomuser.me/api/portraits/men/32.jpg', class: 'w-16 h-16 rounded-full overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-purple-600 rounded-tr-full' },
+    { img: '', class: 'w-16 h-16 bg-black-600 rounded-xl' },
+    { img: 'https://randomuser.me/api/portraits/men/12.jpg', class: 'w-16 h-16 rounded-full overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-purple-700 rounded-tl-full' },
+    { img: 'https://randomuser.me/api/portraits/women/22.jpg', class: 'w-16 h-16 rounded-xl overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-blue-600 rounded-br-full' },
+    { img: 'https://randomuser.me/api/portraits/men/32.jpg', class: 'w-16 h-16 rounded-full overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-orange-600 rounded-tr-full' },
+    { img: 'https://randomuser.me/api/portraits/women/10.jpg', class: 'w-16 h-16 rounded-xl overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-gray-200 rounded-xl' },
+    { img: 'https://randomuser.me/api/portraits/men/12.jpg', class: 'w-16 h-16 rounded-full overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-purple-700 rounded-tl-full' },
+    { img: '', class: 'w-16 h-16 rounded-xl overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-red-600 rounded-br-full' },
+    { img: 'https://randomuser.me/api/portraits/men/32.jpg', class: 'w-16 h-16 rounded-full overflow-hidden' },
+    { img: '', class: 'w-16 h-16 bg-orange-600 rounded-tr-full' },
+    { img: 'https://randomuser.me/api/portraits/women/10.jpg', class: 'w-16 h-16 rounded-xl overflow-hidden' },
+
+
+  ];
+}

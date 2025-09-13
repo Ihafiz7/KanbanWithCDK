@@ -1,0 +1,113 @@
+<div class="container mx-auto px-4 py-8 max-w-4xl">
+  <div class="mb-8">
+    <h1 class="text-3xl font-bold text-gray-800">
+      {{ isEditMode ? 'Edit User' : 'Add New User' }}
+    </h1>
+    <p class="text-gray-600 mt-2">
+      {{ isEditMode ? 'Update user information' : 'Fill in the details to create a new user' }}
+    </p>
+  </div>
+
+  <!-- Error Message -->
+  <div *ngIf="errorMessage" class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-6">
+    {{ errorMessage }}
+  </div>
+
+  <!-- Loading State -->
+  <div *ngIf="isLoading" class="flex justify-center items-center h-64">
+    <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-[#ea580c]"></div>
+  </div>
+
+  <!-- User Form -->
+  <form *ngIf="!isLoading" [formGroup]="userForm" (ngSubmit)="onSubmit()" class="bg-white shadow-md rounded-lg p-8 space-y-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- Name -->
+      <div>
+        <label for="name" class="block text-sm font-medium text-gray-700">Full Name</label>
+        <input id="name" type="text" formControlName="name" 
+          class="form-input"
+          [class.border-red-500]="userForm.get('name')?.invalid && userForm.get('name')?.touched">
+        <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched" class="text-red-500 text-xs mt-1">
+          Name is required
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email" class="block text-sm font-medium text-gray-700">Email Address</label>
+        <input id="email" type="email" formControlName="email"
+          class="form-input"
+          [class.border-red-500]="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+        <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched" class="text-red-500 text-xs mt-1">
+          Valid email is required
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div>
+        <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+        <input id="phone" type="tel" formControlName="phone"
+          class="form-input"
+          [class.border-red-500]="userForm.get('phone')?.invalid && userForm.get('phone')?.touched">
+        <div *ngIf="userForm.get('phone')?.invalid && userForm.get('phone')?.touched" class="text-red-500 text-xs mt-1">
+          Phone number is required
+        </div>
+      </div>
+
+      <!-- Department -->
+      <div>
+        <label for="department" class="block text-sm font-medium text-gray-700">Department</label>
+        <select id="department" formControlName="department"
+          class="form-input"
+          [class.border-red-500]="userForm.get('department')?.invalid && userForm.get('department')?.touched">
+          <option value="">Select Department</option>
+          <option *ngFor="let dept of departments" [value]="dept">{{ dept }}</option>
+        </select>
+        <div *ngIf="userForm.get('department')?.invalid && userForm.get('department')?.touched" class="text-red-500 text-xs mt-1">
+          Department is required
+        </div>
+      </div>
+
+      <!-- Position -->
+      <div>
+        <label for="position" class="block text-sm font-medium text-gray-700">Position</label>
+        <input id="position" type="text" formControlName="position"
+          class="form-input"
+          [class.border-red-500]="userForm.get('position')?.invalid && userForm.get('position')?.touched">
+        <div *ngIf="userForm.get('position')?.invalid && userForm.get('position')?.touched" class="text-red-500 text-xs mt-1">
+          Position is required
+        </div>
+      </div>
+
+      <!-- Join Date -->
+      <div>
+        <label for="joinDate" class="block text-sm font-medium text-gray-700">Join Date</label>
+        <input id="joinDate" type="date" formControlName="joinDate"
+          class="form-input"
+          [class.border-red-500]="userForm.get('joinDate')?.invalid && userForm.get('joinDate')?.touched">
+        <div *ngIf="userForm.get('joinDate')?.invalid && userForm.get('joinDate')?.touched" class="text-red-500 text-xs mt-1">
+          Join date is required
+        </div>
+      </div>
+
+      <!-- Avatar URL -->
+      <div class="md:col-span-2">
+        <label for="avatar" class="block text-sm font-medium text-gray-700">Avatar URL</label>
+        <input id="avatar" type="url" formControlName="avatar" class="form-input"
+          placeholder="https://example.com/avatar.jpg">
+      </div>
+    </div>
+
+    <!-- Form Actions -->
+    <div class="flex justify-end space-x-4 pt-6 border-t border-gray-200">
+      <button type="button" (click)="onCancel()" class="px-5 py-2 rounded-md border border-gray-300 text-gray-700 hover:bg-gray-100 transition">
+        Cancel
+      </button>
+      <button type="submit" class="px-5 py-2 rounded-md bg-[#ea580c] text-white font-semibold hover:bg-[#c2410c] transition"
+        [disabled]="userForm.invalid || isLoading">
+        {{ isEditMode ? 'Update User' : 'Create User' }}
+      </button>
+    </div>
+  </form>
+</div>

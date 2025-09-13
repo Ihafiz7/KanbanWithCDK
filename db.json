@@ -1,0 +1,131 @@
+{
+  "columns": [
+    {
+      "id": "todo",
+      "title": "To Do",
+      "order": 1
+    },
+    {
+      "id": "inProgress",
+      "title": "In Progress",
+      "order": 2
+    },
+    {
+      "id": "review",
+      "title": "Review",
+      "order": 3
+    },
+    {
+      "id": "done",
+      "title": "Done",
+      "order": 4
+    }
+  ],
+  "tasks": [
+    {
+      "id": "yc5eouo",
+      "status": "todo",
+      "priority": "high",
+      "title": "Hero page",
+      "description": "Create a Hero page for PMRAS",
+      "createdAt": "2025-09-12T13:56:45.420Z",
+      "updatedAt": "2025-09-12T13:56:45.420Z"
+    },
+    {
+      "id": "4l0qcrs",
+      "status": "todo",
+      "priority": "low",
+      "title": "Second Page",
+      "description": "Add a second page with a marquee style",
+      "createdAt": "2025-09-12T13:57:43.393Z",
+      "updatedAt": "2025-09-12T13:57:43.393Z"
+    },
+    {
+      "id": "bgd61yy",
+      "status": "done",
+      "priority": "high",
+      "title": "Create Service ",
+      "description": "Create a fake api call",
+      "createdAt": "2025-09-12T13:58:37.067Z",
+      "updatedAt": "2025-09-13T13:28:48.463Z"
+    },
+    {
+      "id": "vlluv4b",
+      "status": "inProgress",
+      "priority": "medium",
+      "title": "Create DB",
+      "description": "Create a json Db",
+      "createdAt": "2025-09-12T13:59:04.260Z",
+      "updatedAt": "2025-09-12T13:59:04.260Z"
+    },
+    {
+      "id": "vt2f0v4",
+      "status": "review",
+      "priority": "medium",
+      "title": "Models ",
+      "description": "Create Models For PMRAS",
+      "createdAt": "2025-09-12T13:59:34.769Z",
+      "updatedAt": "2025-09-13T12:52:50.328Z"
+    },
+    {
+      "id": "seqhgf6",
+      "status": "review",
+      "priority": "high",
+      "title": "JSON",
+      "description": "Create a Default Json Method for default db Call",
+      "createdAt": "2025-09-12T14:00:10.938Z",
+      "updatedAt": "2025-09-13T12:52:51.813Z"
+    },
+    {
+      "id": "6k0310z",
+      "status": "done",
+      "priority": "high",
+      "title": "Kanban",
+      "description": "Design A kanban borad design",
+      "createdAt": "2025-09-12T14:00:41.410Z",
+      "updatedAt": "2025-09-12T14:00:41.410Z"
+    }
+  ],
+  "users": [
+    {
+      "name": "FahaD Amin",
+      "email": "john.doe@example.com",
+      "phone": "123-456-7890",
+      "department": "Engineering",
+      "position": "Software Developer",
+      "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
+      "joinDate": "2023-01-15",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "phone": "098-765-4321",
+      "department": "Marketing",
+      "position": "Marketing Manager",
+      "avatar": "https://randomuser.me/api/portraits/women/2.jpg",
+      "joinDate": "2022-08-22"
+    },
+    {
+      "id": "3",
+      "name": "Robert Johnson",
+      "email": "robert.j@example.com",
+      "phone": "555-123-4567",
+      "department": "Sales",
+      "position": "Sales Executive",
+      "avatar": "https://randomuser.me/api/portraits/men/3.jpg",
+      "joinDate": "2023-03-10"
+    },
+    {
+      "id": "082b",
+      "name": "Hafiz",
+      "email": "hafizalasad712@gmail.com",
+      "phone": "2345678",
+      "department": "Engineering",
+      "position": "QA",
+      "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
+      "joinDate": "2025-09-13"
+    }
+  ]
+}

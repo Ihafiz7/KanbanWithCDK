@@ -1,0 +1,79 @@
+<!-- footer.component.html -->
+<footer class="bg-gray-900 text-white">
+  <!-- Main Footer Content -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <!-- Brand Column -->
+      <div class="lg:col-span-2">
+        <div class="flex items-center mb-6">
+          <div class="w-10 h-10  flex items-center justify-center mr-3">
+            <img src="assets/logo.svg" alt="Logo">
+        </div>
+          <span class="text-2xl font-bold text-orange-600">PMRAS</span>
+        </div>
+        <p class="text-gray-400 mb-6 max-w-md">
+          Streamline your workflow, collaborate with your team, and achieve more with our intuitive kanban board platform.
+        </p>
+        
+        <!-- Newsletter Signup -->
+        <div class="mb-6">
+          <h3 class="text-lg font-semibold mb-4">Stay up to date</h3>
+          <div class="flex">
+            <input 
+              type="email" 
+              placeholder="Enter your email" 
+              class="bg-gray-800 text-white px-4 py-3 rounded-l-lg focus:outline-none focus:ring-2 focus:ring-[#ea580c] w-full"
+            >
+            <button class="bg-[#ea580c] hover:bg-[#c2410c] px-6 py-3 rounded-r-lg font-medium transition-colors duration-300">
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Links Columns -->
+      <div *ngFor="let column of footerLinks" class="mt-6 lg:mt-0">
+        <h3 class="text-lg font-semibold mb-6 text-[#ea580c]">{{ column.title }}</h3>
+        <ul class="space-y-4">
+          <li *ngFor="let link of column.links">
+            <a 
+              [href]="link.url" 
+              class="text-gray-400 hover:text-white transition-colors duration-300"
+            >
+              {{ link.name }}
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-gray-800 mt-12 pt-8">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <!-- Copyright -->
+        <div class="text-gray-400 text-sm mb-4 md:mb-0">
+          © {{ currentYear }} KanbanFlow. All rights reserved.
+        </div>
+
+        <!-- Legal Links -->
+        <div class="flex space-x-6">
+          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Privacy Policy</a>
+          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Terms of Service</a>
+          <a href="#" class="text-gray-400 hover:text-white text-sm transition-colors duration-300">Cookie Policy</a>
+        </div>
+
+        <!-- Social Links -->
+        <div class="flex space-x-4 mt-4 md:mt-0">
+          <a 
+            *ngFor="let social of socialLinks" 
+            [href]="social.url" 
+            class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center text-gray-400 hover:bg-[#ea580c] hover:text-white transition-all duration-300"
+            [title]="social.name"
+          >
+            <i [class]="social.icon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

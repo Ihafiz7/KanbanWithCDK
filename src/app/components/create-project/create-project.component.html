@@ -1,0 +1,49 @@
+<div class="max-w-2xl mx-auto mt-10 p-6 bg-white rounded-xl shadow-md">
+  <h2 class="text-2xl font-bold text-orange-600 mb-6">Create New Project</h2>
+
+  <form [formGroup]="projectForm" (ngSubmit)="onSubmit()" class="space-y-4">
+
+    <!-- Project Name -->
+    <div>
+      <label class="block text-gray-700 font-medium mb-1" for="name">Project Name</label>
+      <input type="text" id="name" formControlName="name"
+             placeholder="Enter project name"
+             class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600"/>
+      <div *ngIf="projectForm.get('name')?.touched && projectForm.get('name')?.invalid"
+           class="text-red-500 text-sm mt-1">Project name is required.</div>
+    </div>
+
+    <!-- Description -->
+    <div>
+      <label class="block text-gray-700 font-medium mb-1" for="description">Description</label>
+      <textarea id="description" formControlName="description" rows="3"
+                placeholder="Enter project description"
+                class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600"></textarea>
+    </div>
+
+    <!-- Status -->
+    <div>
+      <label class="block text-gray-700 font-medium mb-1" for="status">Status</label>
+      <select id="status" formControlName="status"
+              class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-600">
+        <option value="">Select Status</option>
+        <option value="on-going">On-going</option>
+        <option value="completed">Completed</option>
+        <option value="planned">Planned</option>
+      </select>
+      <div *ngIf="projectForm.get('status')?.touched && projectForm.get('status')?.invalid"
+           class="text-red-500 text-sm mt-1">Please select a status.</div>
+    </div>
+
+    <!-- Submit Button -->
+    <button type="submit"
+            [disabled]="projectForm.invalid || loading"
+            class="w-full bg-orange-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-orange-700 transition">
+      {{ loading ? 'Saving...' : 'Create Project' }}
+    </button>
+
+    <!-- Feedback Messages -->
+    <div *ngIf="successMessage" class="text-green-600 mt-2">{{ successMessage }}</div>
+    <div *ngIf="errorMessage" class="text-red-600 mt-2">{{ errorMessage }}</div>
+  </form>
+</div>
