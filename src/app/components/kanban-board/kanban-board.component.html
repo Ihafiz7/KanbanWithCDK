@@ -81,7 +81,7 @@
                 {{ task.priority }}
               </span>
 
-              <div *ngIf="task.assignee" class="flex items-center">
+              <!-- <div *ngIf="task.assignee" class="flex items-center">
                 <div
                   class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs font-bold">
                   {{ getUserInitials(getUserById(task.assignee)!) }}
@@ -92,7 +92,24 @@
                     {{ user.name }}
                   </option>
                 </select>
+              </div> -->
+              <div class="flex items-center">
+                <!-- Avatar / Initials (works even if user not loaded) -->
+                <div
+                  class="w-6 h-6 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs font-bold">
+                  {{ getUserInitialsById(task.assignee) }}
+                </div>
+
+                <!-- Assignee dropdown: always visible, shows "Unassigned" when empty -->
+                <select class="ml-2 text-xs border-none bg-transparent focus:outline-none"
+                  [ngModel]="task.assignee || ''" (ngModelChange)="onAssigneeChange(task, $event)">
+                  <option value="">Unassigned</option>
+                  <option *ngFor="let user of users" [value]="user.id + ''">
+                    {{ user.name }}
+                  </option>
+                </select>
               </div>
+
             </div>
           </div>
         </div>

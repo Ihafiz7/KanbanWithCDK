@@ -38,6 +38,10 @@ export class CreateProjectComponent implements OnInit {
           this.loading = false;
           this.successMessage = 'Project created successfully!';
           this.projectForm.reset();
+
+          if (res && res.id) {
+          this.redirectToProject(res.id); 
+        }
         },
         error: (err) => {
           this.loading = false;

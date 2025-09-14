@@ -7,6 +7,7 @@ import { KanbanBoardComponent } from './components/kanban-board/kanban-board.com
 import { AnalyticsComponent } from './components/analytics/analytics.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { CreateProjectComponent } from './components/create-project/create-project.component';
+import { ProjectListComponent } from './components/project-list/project-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -14,7 +15,7 @@ const routes: Routes = [
   { path: 'kanban/:id', component: KanbanBoardComponent },
   { path: 'analytics', component: AnalyticsComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'projects', component: CreateProjectComponent },
+  { path: 'projects', component: ProjectListComponent },
   { path: 'users', component: UserListComponent },
   { path: 'users/add', component: UserAddEditComponent },
   { path: 'users/edit/:id', component: UserAddEditComponent },

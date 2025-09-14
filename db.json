@@ -29,7 +29,9 @@
       "title": "Hero page",
       "description": "Create a Hero page for PMRAS",
       "createdAt": "2025-09-12T13:56:45.420Z",
-      "updatedAt": "2025-09-12T13:56:45.420Z"
+      "updatedAt": "2025-09-14T13:45:08.659Z",
+      "projectId": "1",
+      "assignee": "1"
     },
     {
       "id": "4l0qcrs",
@@ -38,7 +40,8 @@
       "title": "Second Page",
       "description": "Add a second page with a marquee style",
       "createdAt": "2025-09-12T13:57:43.393Z",
-      "updatedAt": "2025-09-12T13:57:43.393Z"
+      "updatedAt": "2025-09-12T13:57:43.393Z",
+      "projectId": "1"
     },
     {
       "id": "bgd61yy",
@@ -47,7 +50,8 @@
       "title": "Create Service ",
       "description": "Create a fake api call",
       "createdAt": "2025-09-12T13:58:37.067Z",
-      "updatedAt": "2025-09-13T13:28:48.463Z"
+      "updatedAt": "2025-09-13T13:28:48.463Z",
+      "projectId": "1"
     },
     {
       "id": "vlluv4b",
@@ -56,7 +60,8 @@
       "title": "Create DB",
       "description": "Create a json Db",
       "createdAt": "2025-09-12T13:59:04.260Z",
-      "updatedAt": "2025-09-12T13:59:04.260Z"
+      "updatedAt": "2025-09-12T13:59:04.260Z",
+      "projectId": "1"
     },
     {
       "id": "vt2f0v4",
@@ -65,16 +70,18 @@
       "title": "Models ",
       "description": "Create Models For PMRAS",
       "createdAt": "2025-09-12T13:59:34.769Z",
-      "updatedAt": "2025-09-13T12:52:50.328Z"
+      "updatedAt": "2025-09-13T12:52:50.328Z",
+      "projectId": "1"
     },
     {
       "id": "seqhgf6",
-      "status": "review",
+      "status": "inProgress",
       "priority": "high",
       "title": "JSON",
       "description": "Create a Default Json Method for default db Call",
       "createdAt": "2025-09-12T14:00:10.938Z",
-      "updatedAt": "2025-09-13T12:52:51.813Z"
+      "updatedAt": "2025-09-14T13:11:31.280Z",
+      "projectId": "1"
     },
     {
       "id": "6k0310z",
@@ -83,7 +90,18 @@
       "title": "Kanban",
       "description": "Design A kanban borad design",
       "createdAt": "2025-09-12T14:00:41.410Z",
-      "updatedAt": "2025-09-12T14:00:41.410Z"
+      "updatedAt": "2025-09-12T14:00:41.410Z",
+      "projectId": "1"
+    },
+    {
+      "id": "lway976",
+      "status": "todo",
+      "priority": "medium",
+      "title": "asdfgh",
+      "description": "sdfgh",
+      "projectId": null,
+      "createdAt": "2025-09-14T13:29:58.305Z",
+      "updatedAt": "2025-09-14T13:29:58.305Z"
     }
   ],
   "users": [
@@ -126,6 +144,20 @@
       "position": "QA",
       "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
       "joinDate": "2025-09-13"
+    }
+  ],
+  "projects": [
+    {
+      "id": "30fc",
+      "name": "Abc",
+      "description": "Abc company",
+      "status": "on-going"
+    },
+    {
+      "id": "1",
+      "name": "Scrum Development",
+      "description": "Create a kanban project.",
+      "status": "on-going"
     }
   ]
 }

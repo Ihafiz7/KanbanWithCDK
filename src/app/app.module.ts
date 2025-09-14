@@ -17,6 +17,7 @@ import { AnalyticsComponent } from './components/analytics/analytics.component';
 import { UserListComponent } from './components/user-list/user-list.component';
 import { UserAddEditComponent } from './components/user-add-edit/user-add-edit.component';
 import { CreateProjectComponent } from './components/create-project/create-project.component';
+import { ProjectListComponent } from './components/project-list/project-list.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { CreateProjectComponent } from './components/create-project/create-proje
     UserListComponent,
     UserAddEditComponent,
     CreateProjectComponent,
+    ProjectListComponent,
   ],
   imports: [
     BrowserModule,

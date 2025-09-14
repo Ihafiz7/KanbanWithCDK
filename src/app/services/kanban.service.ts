@@ -8,7 +8,7 @@ import { BoardColumn, User, Task, Project } from '../kanban.model';
 })
 export class KanbanService {
 
-   private apiUrl = 'http://localhost:3000'; 
+  private apiUrl = 'http://localhost:3000';
 
   constructor(private http: HttpClient) { }
 
@@ -26,7 +26,7 @@ export class KanbanService {
   }
 
   getTasks(): Observable<Task[]> {
-    
+
     return this.http.get<Task[]>(`${this.apiUrl}/tasks`).pipe(
       catchError(error => {
         console.error('Error fetching tasks', error);
@@ -42,7 +42,7 @@ export class KanbanService {
       createdAt: new Date(),
       updatedAt: new Date()
     };
-    
+
     return this.http.post<Task>(`${this.apiUrl}/tasks`, newTask).pipe(
       catchError(error => {
         console.error('Error adding task', error);
@@ -56,7 +56,7 @@ export class KanbanService {
       ...task,
       updatedAt: new Date()
     };
-    
+
     return this.http.put<Task>(`${this.apiUrl}/tasks/${task.id}`, updatedTask).pipe(
       catchError(error => {
         console.error('Error updating task', error);
@@ -80,7 +80,7 @@ export class KanbanService {
       id: this.generateId(),
       order: this.getDefaultColumns().length + 1
     };
-    
+
     return this.http.post<BoardColumn>(`${this.apiUrl}/columns`, newColumn).pipe(
       catchError(error => {
         console.error('Error adding column', error);
@@ -122,15 +122,22 @@ export class KanbanService {
     return this.http.post<Project>(`${this.apiUrl}/projects`, project);
   }
 
- private getDefaultColumns(): BoardColumn[] {
-  return [
-    { id: 'todo', title: 'To Do', order: 1, tasks: [] },
-    { id: 'inProgress', title: 'In Progress', order: 2, tasks: [] },
-    { id: 'review', title: 'Review', order: 3, tasks: [] },
-    { id: 'done', title: 'Done', order: 4, tasks: [] }
-  ];
-}
+  getTasksByProject(projectId: string) {
+    return this.http.get<Task[]>(`${this.apiUrl}/tasks?projectId=${projectId}`);
+  }
 
+  getProjects() {
+    return this.http.get<Project[]>(`${this.apiUrl}/projects`);
+  }
+
+  private getDefaultColumns(): BoardColumn[] {
+    return [
+      { id: 'todo', title: 'To Do', order: 1, tasks: [] },
+      { id: 'inProgress', title: 'In Progress', order: 2, tasks: [] },
+      { id: 'review', title: 'Review', order: 3, tasks: [] },
+      { id: 'done', title: 'Done', order: 4, tasks: [] }
+    ];
+  }
 
   private getDefaultUsers(): User[] {
     return [

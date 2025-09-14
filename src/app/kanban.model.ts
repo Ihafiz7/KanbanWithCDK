@@ -7,6 +7,7 @@ export interface Task {
   assignee?: string | null;
   createdAt: Date;
   updatedAt: Date;
+  projectId: string;
 }
 
 export interface User {
@@ -28,6 +29,7 @@ export interface BoardColumn {
 }
 
 export interface Project {
+  id?: string;
   name: string;
   description: string;
   status: string;
