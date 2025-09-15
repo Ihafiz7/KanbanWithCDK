@@ -12,7 +12,7 @@ import { KanbanService } from 'src/app/services/kanban.service';
 export class UserAddEditComponent implements OnInit{
   userForm: FormGroup;
   isEditMode = false;
-  userId: number | null = null;
+  userId: String | null = null;
   isLoading = false;
   errorMessage = '';
 
@@ -39,7 +39,7 @@ export class UserAddEditComponent implements OnInit{
     this.route.params.subscribe(params => {
       if (params['id']) {
         this.isEditMode = true;
-        this.userId = +params['id'];
+        this.userId = params['id'];
         this.loadUser(this.userId);
       }
     });

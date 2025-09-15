@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'analytics', component: AnalyticsComponent },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'projects', component: ProjectListComponent },
+  { path: 'create', component: CreateProjectComponent },
   { path: 'users', component: UserListComponent },
   { path: 'users/add', component: UserAddEditComponent },
   { path: 'users/edit/:id', component: UserAddEditComponent },
